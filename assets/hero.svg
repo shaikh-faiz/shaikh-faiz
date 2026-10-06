@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+            .bg { fill: #070B16; }
+            .text-main { font-family: 'Space Grotesk', system-ui, sans-serif; fill: #F5F7FA; }
+            .text-blue { fill: #247BFF; }
+            .text-crimson { fill: #FF354F; }
+            .greeting { font-size: 16px; font-weight: 600; letter-spacing: 2px; }
+            .name { font-size: 54px; font-weight: 700; letter-spacing: 1px; }
+            .pitch { font-size: 14px; font-weight: 400; fill: #8B949E; line-height: 1.5; }
+            .role-container { font-size: 24px; font-weight: 600; fill: #247BFF; }
+            
+            /* Animation for roles */
+            .role-text { opacity: 0; animation: cycleRoles 12s infinite; }
+            .role-2 { animation-delay: 3s; }
+            .role-3 { animation-delay: 6s; }
+            .role-4 { animation-delay: 9s; }
+            @keyframes cycleRoles {
+                0%, 20% { opacity: 1; transform: translateY(0); }
+                25%, 95% { opacity: 0; transform: translateY(-10px); }
+                100% { opacity: 0; transform: translateY(10px); }
+            }
+            .glow-effect { animation: pulseGlow 4s ease-in-out infinite alternate; }
+            @keyframes pulseGlow {
+                0% { filter: drop-shadow(0 0 15px rgba(36,123,255,0.4)); }
+                100% { filter: drop-shadow(0 0 25px rgba(255,53,79,0.4)); }
+            }
+        </style>
+        <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#247BFF" stop-opacity="0.1"/>
+            <stop offset="100%" stop-color="#FF354F" stop-opacity="0.1"/>
+        </linearGradient>
+    </defs>
+    
+    <rect class="bg" width="800" height="400" rx="12"/>
+    <rect width="800" height="400" fill="url(#glowGrad)" rx="12"/>
+    
+    <!-- LEFT COLUMN -->
+    <g transform="translate(50, 100)">
+        <text class="text-main greeting" y="0">HELLO, I'M</text>
+        <text class="text-main name" y="55">FAIZ SHAIKH</text>
+        
+        <g transform="translate(0, 95)">
+            <text class="text-main role-container role-text role-1">SEO Consultant</text>
+            <text class="text-main role-container role-text role-2">Digital Marketing Strategist</text>
+            <text class="text-main role-container role-text role-3">Google Ads Specialist</text>
+            <text class="text-main role-container role-text role-4">Growth &amp; SEO Consultant</text>
+        </g>
+        
+        <foreignObject x="0" y="130" width="400" height="80">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'Space Grotesk',sans-serif;font-size:14px;color:#8B949E;line-height:1.6;">
+                Helping businesses rank higher, generate more leads and turn digital marketing into measurable growth.
+            </div>
+        </foreignObject>
+
+        <!-- Location & Website Tags -->
+        <g transform="translate(0, 220)">
+            <rect width="120" height="30" rx="15" fill="#0D1220" stroke="#247BFF" stroke-width="1"/>
+            <text x="60" y="20" class="text-main" font-size="12" text-anchor="middle">📍 Mumbai, India</text>
+            
+            <rect x="135" y="0" width="140" height="30" rx="15" fill="#0D1220" stroke="#FF354F" stroke-width="1"/>
+            <text x="205" y="20" class="text-main" font-size="12" text-anchor="middle">🌐 rankwithfaiz.com</text>
+        </g>
+    </g>
+
+    <!-- RIGHT COLUMN: Portrait -->
+    <g transform="translate(450, 20)">
+        <image href="id.png" width="350" height="380" class="glow-effect" preserveAspectRatio="xMidYMax meet"/>
+    </g>
+</svg>
