@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+            .bg { fill: #070B16; font-family: 'Space Grotesk', system-ui, sans-serif; }
+            .card { fill: #0D1220; stroke: #247BFF; stroke-width: 0.5; stroke-opacity: 0.3; }
+            .text-main { fill: #F5F7FA; }
+            .text-sub { fill: #8B949E; font-size: 12px; }
+            .title { font-size: 20px; font-weight: 700; letter-spacing: 1px; fill: #247BFF; }
+            
+            /* Slider Animation */
+            .slide { opacity: 0; animation: slideShow 12s infinite; }
+            .slide-1 { animation-delay: 0s; }
+            .slide-2 { animation-delay: 4s; }
+            .slide-3 { animation-delay: 8s; }
+            @keyframes slideShow {
+                0%, 28% { opacity: 1; transform: translateX(0); }
+                33%, 95% { opacity: 0; transform: translateX(20px); }
+                100% { opacity: 0; transform: translateX(-20px); }
+            }
+        </style>
+    </defs>
+    
+    <rect class="bg" width="800" height="400" rx="12"/>
+    
+    <!-- WHAT I DO -->
+    <g transform="translate(40, 40)">
+        <text class="title" y="0">WHAT I DO</text>
+        
+        <!-- Grid of skills -->
+        <g transform="translate(0, 30)">
+            <rect class="card" x="0" y="0" width="160" height="40" rx="6"/>
+            <text class="text-main" x="80" y="25" font-size="13" font-weight="600" text-anchor="middle">Technical SEO</text>
+            
+            <rect class="card" x="175" y="0" width="160" height="40" rx="6"/>
+            <text class="text-main" x="255" y="25" font-size="13" font-weight="600" text-anchor="middle">Content Strategy</text>
+            
+            <rect class="card" x="0" y="55" width="160" height="40" rx="6"/>
+            <text class="text-main" x="80" y="80" font-size="13" font-weight="600" text-anchor="middle">Google &amp; Meta Ads</text>
+            
+            <rect class="card" x="175" y="55" width="160" height="40" rx="6"/>
+            <text class="text-main" x="255" y="80" font-size="13" font-weight="600" text-anchor="middle">Local SEO</text>
+            
+            <rect class="card" x="0" y="110" width="160" height="40" rx="6"/>
+            <text class="text-main" x="80" y="135" font-size="13" font-weight="600" text-anchor="middle">AI Search / GEO</text>
+            
+            <rect class="card" x="175" y="110" width="160" height="40" rx="6"/>
+            <text class="text-main" x="255" y="135" font-size="13" font-weight="600" text-anchor="middle">Conv. Optimization</text>
+        </g>
+    </g>
+
+    <!-- BEYOND MARKETING (Slider) -->
+    <g transform="translate(440, 40)">
+        <text class="title" y="0" fill="#FF354F">BEYOND MARKETING</text>
+        
+        <g class="slide slide-1" transform="translate(0, 40)">
+            <text class="text-main" font-size="48" font-weight="700" y="40">01</text>
+            <text class="text-main" font-size="20" font-weight="600" x="70" y="25">BUILD</text>
+            <text class="text-sub" x="70" y="45">Websites, landing pages, digital products</text>
+        </g>
+        
+        <g class="slide slide-2" transform="translate(0, 40)">
+            <text class="text-main" font-size="48" font-weight="700" y="40">02</text>
+            <text class="text-main" font-size="20" font-weight="600" x="70" y="25">CREATE</text>
+            <text class="text-sub" x="70" y="45">Content, branding, visual storytelling</text>
+        </g>
+        
+        <g class="slide slide-3" transform="translate(0, 40)">
+            <text class="text-main" font-size="48" font-weight="700" y="40">03</text>
+            <text class="text-main" font-size="20" font-weight="600" x="70" y="25">EXPLORE</text>
+            <text class="text-sub" x="70" y="45">AI, technology, growth experiments</text>
+        </g>
+    </g>
+</svg>
