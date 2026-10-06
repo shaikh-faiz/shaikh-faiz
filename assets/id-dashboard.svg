@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+            .bg { fill: #070B16; font-family: 'Space Grotesk', system-ui, sans-serif; }
+            .badge-bg { fill: #0D1220; stroke: #247BFF; stroke-width: 2; }
+            .text-main { fill: #F5F7FA; }
+            .text-crimson { fill: #FF354F; font-weight: 700; }
+            .mono { font-family: 'Space Mono', monospace; font-size: 10px; fill: #8B949E; }
+            
+            .swing { 
+                transform-origin: 400px -50px; 
+                animation: pendulum 6s ease-in-out infinite; 
+            }
+            @keyframes pendulum {
+                0% { transform: rotate(-1.5deg); }
+                50% { transform: rotate(1.5deg); }
+                100% { transform: rotate(-1.5deg); }
+            }
+            .light-sweep { animation: sweep 5s linear infinite; }
+            @keyframes sweep {
+                0% { transform: translateX(-300px) skewX(-45deg); opacity: 0; }
+                50% { transform: translateX(300px) skewX(-45deg); opacity: 0.1; }
+                100% { transform: translateX(500px) skewX(-45deg); opacity: 0; }
+            }
+        </style>
+        <clipPath id="portraitClip">
+            <rect x="0" y="0" width="120" height="150" rx="8" />
+        </clipPath>
+        <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#8B949E"/>
+            <stop offset="50%" stop-color="#F5F7FA"/>
+            <stop offset="100%" stop-color="#8B949E"/>
+        </linearGradient>
+    </defs>
+    
+    <rect class="bg" width="800" height="400" rx="12"/>
+    <text class="text-main" x="400" y="40" font-size="16" font-weight="700" letter-spacing="3" text-anchor="middle">THE PERSON BEHIND THE RANKINGS</text>
+    
+    <path d="M380,-10 L380,80 M420,-10 L420,80" stroke="#0D1220" stroke-width="6"/>
+    
+    <g class="swing">
+        <rect x="375" y="75" width="50" height="15" rx="4" fill="url(#metal)"/>
+        
+        <g transform="translate(250, 95)">
+            <rect class="badge-bg" width="300" height="260" rx="16"/>
+            <rect class="light-sweep" width="50" height="260" fill="#fff" opacity="0.1"/>
+            
+            <text class="text-crimson" x="20" y="30" font-size="14" letter-spacing="2">RANKWITHFAIZ</text>
+            <text class="text-main mono" x="240" y="30">ID:001</text>
+            
+            <g transform="translate(20, 50)">
+                <rect width="120" height="150" fill="#070B16" rx="8"/>
+                <image href="id.png" width="120" height="150" clip-path="url(#portraitClip)" preserveAspectRatio="xMidYMid slice"/>
+            </g>
+            
+            <g transform="translate(155, 70)">
+                <text class="mono" y="0">NAME</text>
+                <text class="text-main" y="15" font-size="18" font-weight="700">FAIZ SHAIKH</text>
+                
+                <text class="mono" y="40">ROLE</text>
+                <text class="text-main" y="55" font-size="12" font-weight="600">DIGITAL MKTG STRATEGIST</text>
+                
+                <text class="mono" y="80">BASE</text>
+                <text class="text-main" y="95" font-size="12" font-weight="600">MUMBAI, INDIA</text>
+                
+                <text class="mono" y="120">ACCESS LEVEL</text>
+                <text class="text-main" y="135" font-size="12" fill="#247BFF" font-weight="700">ADMINISTRATOR</text>
+            </g>
+            
+            <g transform="translate(20, 220)">
+                <path d="M0,0 v20 M4,0 v20 M12,0 v20 M16,0 v20 M20,0 v20 M28,0 v20 M32,0 v20 M36,0 v20 M44,0 v20 M48,0 v20 M56,0 v20 M60,0 v20 M68,0 v20 M72,0 v20 M80,0 v20" stroke="#8B949E" stroke-width="2"/>
+                <text class="mono" x="100" y="12">rankwithfaiz.com</text>
+            </g>
+        </g>
+    </g>
+</svg>
